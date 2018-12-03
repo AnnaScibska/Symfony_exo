@@ -1,0 +1,46 @@
+#oc_platform_homepage:
+#    path:     /
+#    defaults: { _controller: OCPlatformBundle:Default:index }
+
+exo42:
+    path: /{page}
+    defaults:
+        _controller: OCPlatformBundle:Advert:exo42
+        page: 1
+
+hello_the_world:
+    path:     /hello-world
+    defaults: { _controller: OCPlatformBundle:Advert:index }
+
+byebye-world:
+    path:     /byebye-world
+    defaults: { _controller: OCPlatformBundle:Advert:byebye }
+
+oc_platform_view:
+    path:      /platform/advert/{id}
+    defaults:
+        _controller: OCPlatformBundle:Advert:view
+
+oc_platform_viewB:
+    path:      /platform/advert/url/{id}
+    defaults:
+        _controller: OCPlatformBundle:Advert:viewB
+
+oc_platform_view2:
+    path:      /platform/advert/relative_url/{id}
+    defaults:
+        _controller: OCPlatformBundle:Advert:view2
+
+oc_platform_view3:
+    path:      /platform/advert/absolut_url/{id}
+    defaults:
+        _controller: OCPlatformBundle:Advert:view3
+
+oc_platform_view_slug:
+    path:      /platform/{year}/{slug}.{format}
+    defaults:
+        _controller: OCPlatformBundle:Advert:viewSlug
+        format:      html
+    requirements:
+        year:   '\d{4}'
+        format: html|xml

@@ -1,0 +1,30 @@
+{% extends "AnulaAnnonceBundle::layout.html.twig" %}
+
+{% block bodyAnulaBundle %}
+
+    <h2>{{ annonce.title }}</h2>
+    <i>Par {{ annonce.author }}, le {{ annonce.date|date('d/m/Y') }}</i>
+
+    <div class="well">
+        {{ annonce.content }}
+    </div>
+    <p>
+        <a href="{{ path('anula_annonce_homepage') }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Retour à la liste
+        </a>
+        <a href="{{ path('anula_annonce_homepage', {'id': annonce.id}) }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-edit"></i>
+            Modifier l'annonce TODO
+        </a>
+        <a href="{{ path('anula_annonce_homepage', {'id': annonce.id}) }}" class="btn btn-danger">
+            <i class="glyphicon glyphicon-trash"></i>
+            Supprimer l'annonce TODO
+        </a>
+    </p>
+
+    <h4>Annonce nb {{ annonce.id }}</h4>
+    <h5>Title: {{ annonce.title }}</h5>
+    <p>Content: {{ annonce.content }}</p>
+
+{% endblock %}

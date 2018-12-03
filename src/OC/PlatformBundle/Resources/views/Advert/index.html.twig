@@ -1,0 +1,23 @@
+{# src/OC/PlatformBundle/Resources/views/Advert/index.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bienvenue sur ma première page avec Symfony !</title>
+</head>
+<body>
+<h1>Hello World !</h1>
+
+<p>Adres <b><u>relatywny</u></b> generowany z view. Wersja 1:
+    <a href="{{ path('hello_the_world') }}">
+        {{ path('hello_the_world') }}
+    </a>
+</p>
+
+<p>Adres <b><u>absolutny</u></b> generowany z view. Wersja 1:
+    <a href="{{ url('hello_the_world') }}">
+        {{ url('hello_the_world') }}
+    </a>
+</p>
+</body>
+</html>

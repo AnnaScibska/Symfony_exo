@@ -1,0 +1,11 @@
+anula_annonce:
+    resource: "@AnulaAnnonceBundle/Resources/config/routing.yml"
+    prefix:   /anula
+
+oc_platform:
+    resource: "@OCPlatformBundle/Resources/config/routing.yml"
+    prefix:   /
+
+#app:
+#    resource: '@AppBundle/Controller/'
+#    type: annotation

@@ -1,0 +1,13 @@
+anula_annonce_homepage:
+    path:     /
+    defaults: { _controller: AnulaAnnonceBundle:Anula:index }
+
+anula_annonce_add:
+    path:     /add
+    defaults: { _controller: AnulaAnnonceBundle:Anula:add}
+
+anula_annonce_view:
+    path:     /view/{id}
+    defaults:
+        _controller: AnulaAnnonceBundle:Anula:view
+        id: 1
